@@ -25,6 +25,7 @@ scriptExecutionResultに、各ミドルウェアのバージョン情報とPHP�
 ## ログローテート設定スクリプト
 - log_rotate,sh
 
+cron設定は以下の通り
 ```
 # crontab -e
 59 23 * * * sh /root/shellscripts/log_rotate.sh
