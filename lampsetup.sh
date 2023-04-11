@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sudo dnf update -y
-
 ## installをしたミドルウェアのバージョンを追記するファイルを作成
 touch scriptExecutionResult
 
@@ -22,11 +20,9 @@ yum config-manager --set-enabled remi
 yum module enable php:remi-7.4
 yum install php
 
-## mysql
-# MySQL公式のyumリポジトリを追加
-sudo yum install -y https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
 # mysql install
-sudo yum install -y mysql-community-server
+dnf localinstall https://dev.mysql.com/get/mysql80-community-release-el8-3.noarch.rpm
+dnf install mysql-community-server
 
 ## composer install
 dnf --enablerepo=epel -y install composer
@@ -37,5 +33,3 @@ mysqld --version >> scriptExecutionResult
 composer --version >> scriptExecutionResult
 php -v >> scriptExecutionResult
 php -m >> scriptExecutionResult
-
-cat scriptExecutionResult

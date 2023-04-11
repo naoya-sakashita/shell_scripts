@@ -1,13 +1,5 @@
-#!/bin/bash
-
-#update
-dnf update -y
-
-#タイムゾーンをAsia/Tokyoに設定する。
-timedatectl set-timezone Asia/Tokyo
-
 #logrotate設定
-FILE="/usr/cronscript/rotate.txt"
+FILE="/root/shellscripts/rotate.txt"
 LASTDAY="date -d '1 days ago' '+%Y%m%d'"
 if [ -e ${FILE} ] ; then
 while read line
