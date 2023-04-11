@@ -23,6 +23,7 @@ scriptExecutionResultに、各ミドルウェアのバージョン情報とPHP�
 - timezone_setup.sh
 
 ## ログローテート設定スクリプト
+- log_rotate,sh
 
 ```
 # crontab -e
