@@ -10,6 +10,7 @@ useradd.shが、addlist.txtに記載されたユーザIDとPWを読み込みユ�
 - lampsetup.sh
 
 以下のミドルウェアのインストールを行う。
+
 1.Apache
 2.MySQL
 3.PHP
