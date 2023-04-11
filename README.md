@@ -22,3 +22,9 @@ scriptExecutionResultに、各ミドルウェアのバージョン情報とPHP�
 タイムゾーンをtokyo/asiaに設定するスクリプト
 - timezone_setup.sh
 
+## ログローテート設定スクリプト
+
+,,,
+# crontab -e
+59 23 * * * sh /root/shellscripts/log_rotate.sh
+,,,
