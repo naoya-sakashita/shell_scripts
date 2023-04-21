@@ -18,11 +18,11 @@ yum config-manager --set-enabled remi
 
 ## php install
 yum module enable php:remi-7.4
-yum install php
+yum install php -y
 
 # mysql install
 dnf localinstall https://dev.mysql.com/get/mysql80-community-release-el8-3.noarch.rpm
-dnf install mysql-community-server
+dnf install mysql-community-server -y
 
 ## composer install
 dnf --enablerepo=epel -y install composer
